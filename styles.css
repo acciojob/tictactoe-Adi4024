@@ -1,130 +1,52 @@
-/*  your css code here. If applicable */
-/* Basic reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
 body {
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  background: #fff;
-  color: #111;
-  min-height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 40px 20px;
-}
-
-/* Page container */
-.container {
-  width: 420px;
-  max-width: 94vw;
+  font-family: Arial, sans-serif;
   text-align: center;
+  padding: 20px;
 }
 
-/* Title */
 .title {
-  font-family: "Gochi Hand", "Segoe UI", sans-serif;
-  font-size: 40px;
-  margin-bottom: 18px;
-  letter-spacing: 1px;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-/* Player form */
 .player-form {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  justify-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
-.label {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 16px;
+input {
+  margin: 5px;
+  padding: 5px;
 }
 
-.label input {
-  width: 220px;
-  padding: 8px 10px;
-  border: 2px solid #222;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-/* Buttons */
 .btn {
-  margin-top: 8px;
-  padding: 10px 18px;
-  border: 2px solid #222;
-  background: white;
-  cursor: pointer;
-  border-radius: 6px;
-  font-size: 16px;
-}
-.btn.secondary {
-  background: #222;
-  color: #fff;
-  border-color: #222;
+  padding: 6px 15px;
+  margin-top: 10px;
 }
 
-/* Message */
 .message {
-  margin-top: 12px;
-  font-weight: 600;
-  font-size: 18px;
-  min-height: 24px;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
-/* Board */
-.board-wrapper {
-  margin-top: 18px;
-  display: flex;
-  justify-content: center;
-}
-
-.grid {
-  width: 260px;
-  height: 260px;
+.board {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 0;
-  border: 4px solid #333;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 2px;
+  justify-content: center;
+  margin: 20px auto;
 }
 
-/* Cells style */
 .cell {
+  background-color: pink;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f9c7d0; /* pink-ish */
-  border: 2px solid #333;
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 36px;
   cursor: pointer;
-  user-select: none;
-}
-
-/* Simple hover effect */
-.cell:hover {
-  filter: brightness(0.97);
-}
-
-/* Winner/done state */
-.cell.disabled {
-  cursor: default;
-  opacity: 0.9;
+  text-transform: lowercase;
 }
 
 .hidden {
-  display: none !important;
-}
-
-/* Responsive */
-@media (max-width: 420px) {
-  .grid { width: 92vw; height: 92vw; }
-  .label input { width: 44vw; }
+  display: none;
 }
